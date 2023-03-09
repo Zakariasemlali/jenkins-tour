@@ -3,8 +3,8 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'python --version'
-                echo "Running multiple steps"
+                sh 'echo "Running multiple steps"'
+                
             }
         }
     }
