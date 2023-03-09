@@ -1,14 +1,9 @@
-Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent { docker { image 'maven:3.9.0-eclipse-temurin-11' } }
+    agent { docker { image 'python:3.10.7-alpine' } }
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
-                sh '''
-                    echo "Multiline shell steps works too"
-                    ls -lah
-                '''
+                sh 'python --version'
             }
         }
     }
